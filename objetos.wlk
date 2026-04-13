@@ -9,51 +9,82 @@ object pepita {
 }
 
   object remera {
-    const peso = 800
-    const color = "rojo"
-    const material = "lino"
 
-    method color() = color
-    method material() = material
-    method peso() = peso
+    method color() = "rojo"
+    method material() = "lino"
+    method peso() = 800
   }
 
   object pelota {
-    const peso = 1300
-    const color = "parda"
-    const material = "cuero"
 
-    method color() = color
-    method material() = material
-    method peso() = peso
+    method color() = "parda"
+    method material() = "cuero"
+    method peso() = 1300
   }
 
   object biblioteca {
-    const peso = 8000
-    const color = "verde"
-    const material = "madera"
 
-    method color() = color
-    method material() = material
-    method peso() = peso
+    method color() = "verde"
+    method material() = "madera"
+    method peso() = 8000
   }
 
   object munieco {
-    var peso = 800
-    const color = "celeste"
-    const material = "vidrio"
+    var peso = 0
 
-    method color() = color
-    method material() = material
+    method color() = "celeste"
+    method material() = "vidrio"
     method peso() = peso
+    
+    method cambiarPesoA_(pesoNuevo) {
+      peso = pesoNuevo
+    }
   }
 
   object placa {
     var peso = 800
     var color = "rojo"
-    const material = "cobre"
 
     method color() = color
-    method material() = material
+    method material() = "cobre"
     method peso() = peso
+    
+    method cambiarColorA_(colorNuevo) {
+      color = colorNuevo
+    }
+    method cambiarPesoA_(pesoNuevo) {
+      peso = pesoNuevo
+    }
+  }
+
+  object arito {
+
+    method color() = "celeste"
+    method material() = "cobre"
+    method peso() = 180
+  }
+
+  object banquito {
+    
+    var color = "naranja"
+    
+    method color() = color
+    method material() = "madera"
+    method peso() = 1700
+    
+    method cambiarColorA_(colorNuevo) {
+      color = colorNuevo
+    }
+  }
+
+  object cajita {
+    var objetoAdentro = remera
+
+    method color() = "rojo"
+    method material() = "cobre"
+    method peso() = 400 + objetoAdentro.peso()
+    
+    method cambiarObjetoA_(objetoNuevo) {
+      objetoAdentro = objetoNuevo
+    }
   }
